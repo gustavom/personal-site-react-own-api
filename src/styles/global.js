@@ -11,7 +11,7 @@ export default createGlobalStyle`
   *:focus{
     outline: 0;
   }
-  html, border-style,#root{
+  html, body, #root{
     height: 100%;
   }
   body{
