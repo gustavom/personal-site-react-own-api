@@ -1,4 +1,4 @@
-import { takeLatest, call, put, all } from 'redux-saga/effects';
+import { takeLatest, call, put, all, take } from 'redux-saga/effects';
 import { toast } from 'react-toastify';
 
 import history from '~/services/history';
@@ -15,6 +15,8 @@ export function* signIn({ payload }) {
     });
 
     const { token, user } = response.data;
+
+    api.defaults.headers.Authorazation = `Bearer ${token}`;
 
     yield put(signInSuccess(token, user));
 
@@ -39,7 +41,16 @@ export function* signUp({ payload }) {
     yield put(signFailure());
   }
 }
+
+export function setToken({ payload }) {
+  if (!payload) return;
+
+  if (token) {
+    api.defaults.headers.Authorazation = `Bearer ${token}`;
+  }
+}
 export default all([
+  takeLatest('persist/REHYDRATE', setToken),
   takeLatest('@auth/SIGN_IN_REQUEST', signIn),
   takeLatest('@auth/SIGN_UP_REQUEST', signUp),
 ]);
