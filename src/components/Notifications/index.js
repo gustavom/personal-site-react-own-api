@@ -2,7 +2,13 @@ import React from 'react';
 
 import { MdNotifications } from 'react-icons/md';
 
-import { Container, Badge, NotificationsList, Notification } from './styles';
+import {
+  Container,
+  Badge,
+  NotificationsList,
+  Scroll,
+  Notification,
+} from './styles';
 
 export default function Notifications() {
   return (
@@ -12,21 +18,43 @@ export default function Notifications() {
       </Badge>
 
       <NotificationsList>
-        <Notification unread>
-          <p>Você possui um novo item</p>
-          <time>há 2 dias atrás</time>
-          <button type="button">Marcar como lida</button>
-        </Notification>
-        <Notification unread>
-          <p>Você possui um novo item</p>
-          <time>há 2 dias atrás</time>
-          <button type="button">Marcar como lida</button>
-        </Notification>
-        <Notification>
-          <p>Você possui um novo item</p>
-          <time>há 2 dias atrás</time>
-          <button type="button">Marcar como lida</button>
-        </Notification>
+        <Scroll>
+          <Notification unread>
+            <p>Você possui um novo item</p>
+            <time>há 2 dias atrás</time>
+            <button type="button">Marcar como lida</button>
+          </Notification>
+          <Notification unread>
+            <p>Você possui um novo item</p>
+            <time>há 2 dias atrás</time>
+            <button type="button">Marcar como lida</button>
+          </Notification>
+          <Notification>
+            <p>Você possui um novo item</p>
+            <time>há 2 dias atrás</time>
+            <button type="button">Marcar como lida</button>
+          </Notification>
+          <Notification unread>
+            <p>Você possui um novo item</p>
+            <time>há 2 dias atrás</time>
+            <button type="button">Marcar como lida</button>
+          </Notification>
+          <Notification>
+            <p>Você possui um novo item</p>
+            <time>há 2 dias atrás</time>
+            <button type="button">Marcar como lida</button>
+          </Notification>
+          <Notification unread>
+            <p>Você possui um novo item</p>
+            <time>há 2 dias atrás</time>
+            <button type="button">Marcar como lida</button>
+          </Notification>
+          <Notification>
+            <p>Você possui um novo item</p>
+            <time>há 2 dias atrás</time>
+            <button type="button">Marcar como lida</button>
+          </Notification>
+        </Scroll>
       </NotificationsList>
     </Container>
   );
