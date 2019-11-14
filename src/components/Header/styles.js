@@ -53,6 +53,30 @@ export const Profile = styled.div`
       font-size: 12px;
       color: #999;
     }
+    span {
+      display: flex;
+      justify-content: flex-end;
+      a {
+        display: block;
+        padding: 0 3px;
+        cursor: pointer;
+        & + a {
+          position: relative;
+          margin-left: 10px;
+          &:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin-left: -5px;
+            content: '';
+            display: block;
+            height: 100%;
+            width: 1px;
+            background: #999;
+          }
+        }
+      }
+    }
   }
   img {
     width: 32px;
