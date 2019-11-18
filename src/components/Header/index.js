@@ -24,6 +24,9 @@ export default function Header() {
             <li>
               <Link to="/projetos">Projetos</Link>
             </li>
+            <li>
+              <Link to="/project/new">Projetos Add</Link>
+            </li>
           </ul>
         </nav>
         <aside>
