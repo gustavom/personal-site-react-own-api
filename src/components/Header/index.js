@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Container, Content, Profile } from './styles';
 import { signOut } from '~/store/modules/auth/actions';
 
-import Notifications from '~/components/Notifications';
+// import Notifications from '~/components/Notifications';
 
 export default function Header() {
   const dispatch = useDispatch();
@@ -17,16 +17,23 @@ export default function Header() {
       <Content>
         <nav>
           <h1>Gustavo</h1>
-          <Link to="/dashboard">Dashboard</Link>
+          <ul>
+            <li>
+              <Link to="/dashboard">Dashboard</Link>
+            </li>
+            <li>
+              <Link to="/projetos">Projetos</Link>
+            </li>
+          </ul>
         </nav>
         <aside>
-          <Notifications />
+          {/* <Notifications /> */}
           <Profile>
             <div>
               <strong>{profile.name}</strong>
               <span>
                 <Link to="/profile">Meu perfil</Link>
-                <a onClick={handleSignOut}>Sair</a>
+                <Link onClick={handleSignOut}>Sair</Link>
               </span>
             </div>
             <img
