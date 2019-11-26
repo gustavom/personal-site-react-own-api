@@ -7,6 +7,7 @@ import api from '~/services/api';
 import BannerInput from '~/components/BannerInput';
 
 import { Container } from './styles';
+import history from '~/services/history';
 
 export default function ProjectsAdd() {
   async function handleSubmit(data) {
@@ -14,6 +15,7 @@ export default function ProjectsAdd() {
       const response = await api.post('projects', data);
       toast.success('Projeto criado com sucesso!');
       // history.push(`/projects/${response.data.id}`);
+      history.push('/projetos-list');
     } catch (err) {
       toast.error(`Whoops! Internal server error.${err}`);
     }
