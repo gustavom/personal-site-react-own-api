@@ -21,12 +21,12 @@ export default function Header() {
             <li>
               <Link to="/dashboard">Dashboard</Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/projetos">Projetos</Link>
             </li>
             <li>
               <Link to="/project/new">Projetos Add</Link>
-            </li>
+            </li> */}
           </ul>
         </nav>
         <aside>
@@ -41,10 +41,9 @@ export default function Header() {
             </div>
             <img
               src={
-                profile.avatar ?
-                profile.avatar.url
-                :
-                'https://api.adorable.io/avatars/50/abott@adorable.png'
+                profile.avatar
+                  ? profile.avatar.url
+                  : 'https://api.adorable.io/avatars/50/abott@adorable.png'
               }
               alt={profile.name}
             />
