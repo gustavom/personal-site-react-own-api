@@ -1,30 +1,28 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import api from '~/services/api';
 
 import { Container } from './styles';
 
-export default function Dashboard() {
-  const [projects, setProjects] = useState([]);
-  useEffect(() => {
-    async function loadProjects() {
-      const response = await api.get('projects');
-      const data = response.data.map(project => {
-        return project;
-      });
-      setProjects(data);
-    }
-    loadProjects();
-  }, []);
+import { MdHome, MdCollections } from 'react-icons/md';
 
+export default function Dashboard() {
   return (
     <Container>
       <h1>Dashboard</h1>
-      {projects.map(project => (
-        <div key={project.id}>
-          <Link to={`/project/${project.id}/edit`}>{project.name}</Link>
-        </div>
-      ))}
+      <ul className="cards-list">
+        <li>
+          <Link to="/home-edit">
+            <MdHome size={48} color="rgba(0, 0, 0, .7)" />
+            <span>Home Page</span>
+          </Link>
+        </li>
+        <li>
+          <Link to="/projetos-list">
+            <MdCollections size={48} color="rgba(0, 0, 0, .7)" />
+            <span>Projetos</span>
+          </Link>
+        </li>
+      </ul>
     </Container>
   );
 }
