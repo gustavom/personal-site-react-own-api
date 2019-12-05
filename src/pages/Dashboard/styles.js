@@ -24,7 +24,7 @@ export const Container = styled.div`
         padding: 15px;
         border: #eee solid 1px;
         border-radius: 10px;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
         font-weight: 800;
         color: #222;
         font-size: 20px;
@@ -38,8 +38,8 @@ export const Container = styled.div`
           right: 0;
           transform: scale(3.3);
           transform-origin: top right;
-          margin: -15px;
-          opacity: 0.05;
+          margin: -30px;
+          opacity: 0.3;
         }
         &:hover {
           transform: scale(1.1);
