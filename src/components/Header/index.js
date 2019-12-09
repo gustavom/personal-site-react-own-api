@@ -36,7 +36,9 @@ export default function Header() {
               <strong>{profile.name}</strong>
               <span>
                 <Link to="/profile">Meu perfil</Link>
-                <Link onClick={handleSignOut}>Sair</Link>
+                <Link to="" onClick={handleSignOut}>
+                  Sair
+                </Link>
               </span>
             </div>
             <img
