@@ -11,7 +11,7 @@ export default function Dashboard() {
       <h1>Dashboard</h1>
       <ul className="cards-list">
         <li>
-          <Link to="/home-edit">
+          <Link to="/">
             <MdHome size={48} color="rgba(0, 0, 0, .7)" />
             <span>Home Page</span>
           </Link>
@@ -20,6 +20,12 @@ export default function Dashboard() {
           <Link to="/projetos-list">
             <MdCollections size={48} color="rgba(0, 0, 0, .7)" />
             <span>Projetos</span>
+          </Link>
+        </li>
+        <li>
+          <Link to="/project/new">
+            <MdCollections size={48} color="rgba(0, 0, 0, .7)" />
+            <span>Projetos +</span>
           </Link>
         </li>
       </ul>
