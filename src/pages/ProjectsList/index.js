@@ -18,7 +18,12 @@ export default function ProjectsList() {
   }, []);
   return (
     <Container>
-      <h1>Projetos</h1>
+      <h1>
+        Projetos
+        <Link to="/project/new">
+          <span>adicionar +</span>
+        </Link>
+      </h1>
       <table>
         <thead>
           <tr>
