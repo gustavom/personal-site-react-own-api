@@ -31,14 +31,14 @@ export default function Profile() {
         <hr />
 
         <Input
-          name="password"
-          type="oldPassword"
+          name="oldPassword"
+          type="password"
           placeholder="Sua senha atual"
         />
         <Input name="password" type="password" placeholder="Nova senha" />
         <Input
-          name="password"
-          type="confirmPassword"
+          name="confirmPassword"
+          type="password"
           placeholder="Confirmação de senha"
         />
 
