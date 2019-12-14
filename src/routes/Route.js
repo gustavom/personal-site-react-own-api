@@ -24,22 +24,32 @@ export default function RouteWrapper({
     return <Redirect to="/dashboard" />;
   }
 
-  let Layout = signed ? DefaultLayout : AuthLayout;
+  const Layout = signed ? DefaultLayout : AuthLayout;
 
   if (isHome) {
-    Layout = HomeLayout;
+    const LayoutTemplate = HomeLayout;
+    return (
+      <Route
+        {...rest}
+        render={props => (
+          <LayoutTemplate>
+            <Component {...props} />
+          </LayoutTemplate>
+        )}
+      />
+    );
+  } else {
+    return (
+      <Route
+        {...rest}
+        render={props => (
+          <Layout>
+            <Component {...props} />
+          </Layout>
+        )}
+      />
+    );
   }
-
-  return (
-    <Route
-      {...rest}
-      render={props => (
-        <Layout>
-          <Component {...props} />
-        </Layout>
-      )}
-    />
-  );
 }
 
 RouteWrapper.propTypes = {
