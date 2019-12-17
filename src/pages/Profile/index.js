@@ -22,6 +22,7 @@ export default function Profile() {
 
   return (
     <Container>
+      {console.log(profile)}
       <Form initialData={profile} onSubmit={handleSubmit}>
         <AvatarInput name="avatar_id" />
 

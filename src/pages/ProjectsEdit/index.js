@@ -32,7 +32,7 @@ export default function ProjectsEdit({ match }) {
 
   async function handleSubmit(data) {
     try {
-      const response = await api.put('projects', data);
+      await api.put('projects', data);
       toast.success('Projeto criado com sucesso!');
       // history.push(`/projects/${response.data.id}`);
     } catch (err) {
@@ -42,6 +42,7 @@ export default function ProjectsEdit({ match }) {
 
   return (
     <Container>
+      {console.log(project)}
       <Form initialData={project} onSubmit={handleSubmit}>
         <BannerInput name="banner_id" />
 

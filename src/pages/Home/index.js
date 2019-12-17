@@ -22,6 +22,7 @@ export default function Home() {
         <ProjectItem key={project.id}>
           <Link to={project.slug}>
             <h3>{project.name}</h3>
+            <img src={project.banner.url} />
           </Link>
         </ProjectItem>
       ))}
