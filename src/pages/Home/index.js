@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import api from '~/services/api';
 
-import { Container } from './styles';
+import { Container, ProjectItem } from './styles';
 
 export default function Home() {
   const [projects, setProjects] = useState([]);
@@ -19,11 +19,11 @@ export default function Home() {
   return (
     <Container>
       {projects.map(project => (
-        <div key={project.id}>
+        <ProjectItem key={project.id}>
           <Link to={project.slug}>
             <h3>{project.name}</h3>
           </Link>
-        </div>
+        </ProjectItem>
       ))}
     </Container>
   );
