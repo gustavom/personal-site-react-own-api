@@ -19,4 +19,5 @@ export const Wrapper = styled.div`
 export const Content = styled.div`
   width: 100%;
   flex: 1 1 100%;
+  display: flex;
 `;
