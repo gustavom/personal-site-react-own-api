@@ -6,7 +6,7 @@ import { signOut } from '~/store/modules/auth/actions';
 
 // import Notifications from '~/components/Notifications';
 
-export default function Header() {
+export default function HeaderDashBoard() {
   const dispatch = useDispatch();
   const profile = useSelector(state => state.user.profile);
   function handleSignOut(data) {
