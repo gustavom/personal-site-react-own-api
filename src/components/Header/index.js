@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 
 import { Container } from './styles';
 
-export default function Header() {
+export default function Header({ layoutchange }) {
   return (
-    <Container>
+    <Container className={layoutchange}>
       <h1>
         <Link to="/">Gustavo Martusewicz</Link>
       </h1>
