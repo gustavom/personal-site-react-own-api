@@ -6,7 +6,7 @@ import { Wrapper, Content } from './styles';
 import Header from '~/components/Header';
 
 export default function HomeLayout({ children }) {
-  const [scroll, setScroll] = useState(0);
+  // const [scroll, setScroll] = useState(0);
   const [headerLayout, setHeaderLayout] = useState('white');
 
   function handleScroll() {
@@ -14,10 +14,10 @@ export default function HomeLayout({ children }) {
       document.documentElement.scrollTop >=
       document.documentElement.clientHeight - 20
     ) {
-      setScroll(document.documentElement.clientHeight);
+      // setScroll(document.documentElement.clientHeight);
       setHeaderLayout('black');
     } else {
-      setScroll(document.documentElement.clientHeight);
+      // setScroll(document.documentElement.clientHeight);
       setHeaderLayout('white');
     }
   }
