@@ -9,7 +9,11 @@ export const Container = styled.div`
   align-items: baseline;
   justify-content: space-between;
   z-index: 10;
+  font-size: 14px;
   h1 {
+    text-transform: uppercase;
+    font-size: inherit;
+    letter-spacing: 2.5px;
     font-weight: 300;
     color: rgba(0, 0, 0, 0.5);
     a {
@@ -20,15 +24,16 @@ export const Container = styled.div`
     ul {
       li {
         text-transform: uppercase;
-        font-size: 13px;
+        font-size: inherit;
         letter-spacing: 2.5px;
       }
     }
   }
   &.white {
-    color: #fff;
+    /* color: #fff; */
+    color: rgba(255, 255, 255, 0.8);
     h1 {
-      color: rgba(255, 255, 255, 0.8);
+      color: inherit;
       a {
         color: inherit;
       }
