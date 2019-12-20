@@ -23,8 +23,10 @@ export const Container = styled.div`
       text-transform: uppercase;
     }
     a {
-      color: #fff;
       padding: 8px 16px;
+      margin-top: 15px;
+      color: #fff;
+      font-size: 11px;
       border: solid 1px #fff;
       border-radius: 90px;
       text-transform: uppercase;
