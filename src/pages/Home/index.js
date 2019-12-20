@@ -24,6 +24,7 @@ export default function Home() {
         <a
           href="https://www.linkedin.com/in/gustavo-martusewicz/"
           target="_blank"
+          rel="noopener noreferrer"
         >
           linkedin
         </a>
