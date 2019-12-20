@@ -12,6 +12,7 @@ import ProjectsAdd from '../pages/ProjectsAdd';
 import ProjectsEdit from '../pages/ProjectsEdit';
 import ProjectsList from '../pages/ProjectsList';
 import ProjectPage from '../pages/ProjectPage';
+import ProjectsListPage from '../pages/ProjectsListPage';
 
 export default function Routes() {
   return (
@@ -19,10 +20,11 @@ export default function Routes() {
       <Route path="/" exact component={Home} isHome />
       <Route path="/login" exact component={SignIn} />
       <Route path="/register" component={SignUp} />
+      <Route path="/projects" component={ProjectsListPage} isSamplePage />
 
       <Route path="/dashboard" component={Dashboard} isPrivate />
       <Route path="/profile" component={Profile} isPrivate />
-      <Route path="/projects" component={ProjectsList} isPrivate />
+      <Route path="/projetos-list" component={ProjectsList} isPrivate />
       <Route path="/project/new" exact component={ProjectsAdd} isPrivate />
       <Route path="/project/:id/edit" component={ProjectsEdit} isPrivate />
 
