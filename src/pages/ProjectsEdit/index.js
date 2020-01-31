@@ -40,6 +40,18 @@ export default function ProjectsEdit({ match }) {
     }
   }
 
+  async function handleDelete(data) {
+    // const {id} = re
+    if (
+      window.confirm(
+        `Você realmente quer deletar o projeto ${id} ${project.name}?`
+      )
+    ) {
+      window.open('sair.html', 'Obrigado pela visita!');
+    }
+    console.log(id);
+  }
+
   return (
     <Container>
       {console.log(project)}
@@ -53,6 +65,9 @@ export default function ProjectsEdit({ match }) {
 
         <button type="submit">Editar Projeto</button>
       </Form>
+      <button type="button" onClick={handleDelete}>
+        Deletar Projeto
+      </button>
     </Container>
   );
 }
