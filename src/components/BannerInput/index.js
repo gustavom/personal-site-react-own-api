@@ -8,7 +8,8 @@ import { MdAddAPhoto } from 'react-icons/md';
 import { Container } from './styles';
 
 export default function BannerInput() {
-  const { defaultValue, registerField } = useField('banner');
+  const { defaultValue, registerField } = useField('banner_id');
+  const { error } = useField('banner_id');
 
   const [file, setFile] = useState(defaultValue && defaultValue.id);
   const [preview, setPreview] = useState(defaultValue && defaultValue.url);
@@ -22,12 +23,14 @@ export default function BannerInput() {
         path: 'dataset.file',
       });
     }
+    console.log(defaultValue);
   }, [ref.current]); //eslint-disable-line
 
   async function handleChange(e) {
     const data = new FormData();
 
     data.append('file', e.target.files[0]);
+    data.append('type', 'banner');
 
     try {
       const response = await api.post('files', data);
@@ -60,6 +63,8 @@ export default function BannerInput() {
           onChange={handleChange}
           ref={ref}
         />
+
+        {error && <span>{error}</span>}
       </label>
     </Container>
   );

@@ -6,7 +6,7 @@ export default reducers => {
     {
       key: 'portfolioReact',
       storage,
-      whitelist: ['auth', 'user'],
+      whitelist: ['auth', 'user', 'project'],
     },
     reducers
   );
