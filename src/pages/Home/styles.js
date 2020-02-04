@@ -40,10 +40,11 @@ export const ProjectItem = styled.div`
   text-transform: uppercase;
   /* padding-bottom: 25px; */
   border-bottom: solid 3px #222;
-  padding: 15px 3px;
+  padding: 10px 3px;
   margin-bottom: 10px;
   h3{
     font-weight: 500;
+    font-size: 14px;
   }
     &:hover {
       text-decoration: underline;

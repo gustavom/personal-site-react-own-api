@@ -33,7 +33,7 @@ export default function Home() {
       <Container>
         {projects.map(project => (
           <ProjectItem key={project.id}>
-            <Link to={project.slug}>
+            <Link to={`project/${project.slug}`}>
               <h3>{project.name}</h3>
               {/* <img src={project.banner.url} /> */}
             </Link>
