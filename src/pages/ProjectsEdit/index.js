@@ -1,10 +1,8 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import PropTypes from 'prop-types';
 import { Form, Input } from '@rocketseat/unform';
 import { toast } from 'react-toastify';
-// import { Link } from 'react-router-dom';
+
 import api from '~/services/api';
-import history from '~/services/history';
 
 import BannerInput from '~/components/BannerInput';
 
@@ -17,6 +15,8 @@ export default function ProjectsEdit({ history, match }) {
 
   const [project, setProject] = useState(null);
 
+  const [bannerInfo, setBannerInfo] = useState('');
+
   useEffect(() => {
     async function loadProject() {
       try {
@@ -24,18 +24,20 @@ export default function ProjectsEdit({ history, match }) {
         setProject({
           ...data,
         });
+        setBannerInfo(data.banner.url);
+        console.log('bannerInfo', bannerInfo);
       } catch (err) {
         toast.error('Project not found');
         history.push('/');
       }
     }
-
+    console.log(id);
     loadProject();
   }, [id]);
 
   async function handleSubmit(data) {
     try {
-      console.log(data);
+      // console.log(data);
 
       await api.put(`projects/${id}`, data);
       history.push(`/projects/${id}`);
@@ -63,9 +65,8 @@ export default function ProjectsEdit({ history, match }) {
 
   return (
     <Container>
-      {console.log(project)}
       <Form initialData={project} onSubmit={handleSubmit}>
-        <BannerInput name="banner_id" />
+        <BannerInput name="banner_id" urlImg={bannerInfo} />
 
         <Input name="name" placeholder="Nome do Projeto" />
         <Input name="url_external" placeholder="Url do projeto" />

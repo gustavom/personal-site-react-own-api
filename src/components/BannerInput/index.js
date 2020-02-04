@@ -7,8 +7,8 @@ import { MdAddAPhoto } from 'react-icons/md';
 
 import { Container } from './styles';
 
-export default function BannerInput() {
-  const { defaultValue, registerField } = useField('banner_id');
+export default function BannerInput({ urlImg }) {
+  const { defaultValue, registerField } = useField('banner');
   const { error } = useField('banner_id');
 
   const [file, setFile] = useState(defaultValue && defaultValue.id);
@@ -23,8 +23,8 @@ export default function BannerInput() {
         path: 'dataset.file',
       });
     }
-    console.log(defaultValue);
-  }, [ref.current]); //eslint-disable-line
+    console.log('teste', registerField.value);
+  }, [ref]); //eslint-disable-line
 
   async function handleChange(e) {
     const data = new FormData();
@@ -46,10 +46,14 @@ export default function BannerInput() {
 
   return (
     <Container>
+      {console.log('urlImg', urlImg)}
       <label htmlFor="banner">
+        {/* <img src={urlImg} alt="" /> */}
+
+        {urlImg && !preview && <img src={urlImg} alt="" />}
         {preview && <img src={preview} alt="" />}
 
-        {!preview && (
+        {!preview && !urlImg && (
           <div className="icon-add">
             <MdAddAPhoto size={48} color="rgba(0, 0, 0, .7)" />
           </div>
