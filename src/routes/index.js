@@ -28,7 +28,7 @@ export default function Routes() {
       <Route path="/project/new" exact component={ProjectsAdd} isPrivate />
       <Route path="/project/:id/edit" component={ProjectsEdit} isPrivate />
 
-      <Route path="/project/:slug" component={ProjectPage} />
+      <Route path="/project/:slug" component={ProjectPage} isProjectPage />
     </Switch>
   );
 }
