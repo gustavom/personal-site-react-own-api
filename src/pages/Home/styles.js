@@ -36,9 +36,15 @@ export const Container = styled.div`
 `;
 
 export const ProjectItem = styled.div`
+  width: 100%;
   text-transform: uppercase;
-  padding-bottom: 25px;
-  a {
+  /* padding-bottom: 25px; */
+  border-bottom: solid 3px #222;
+  padding: 15px 3px;
+  margin-bottom: 10px;
+  h3{
+    font-weight: 500;
+  }
     &:hover {
       text-decoration: underline;
     }

@@ -21,13 +21,13 @@ export default function Home() {
     <Wrapper>
       <Container className="home-about">
         <h1>Front-end developer</h1>
-        <a
+        {/* <a
           href="https://www.linkedin.com/in/gustavo-martusewicz/"
           target="_blank"
           rel="noopener noreferrer"
         >
           linkedin
-        </a>
+        </a> */}
       </Container>
 
       <Container>
