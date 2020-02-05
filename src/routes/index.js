@@ -20,15 +20,14 @@ export default function Routes() {
       <Route path="/" exact component={Home} isHome />
       <Route path="/login" exact component={SignIn} />
       <Route path="/register" component={SignUp} />
-      <Route path="/projects" component={ProjectsListPage} isSamplePage />
+      <Route path="/projects" component={ProjectsListPage} isProjectPage />
+      <Route path="/project/:slug" component={ProjectPage} isProjectPage />
 
       <Route path="/dashboard" component={Dashboard} isPrivate />
       <Route path="/profile" component={Profile} isPrivate />
       <Route path="/projetos-list" component={ProjectsList} isPrivate />
       <Route path="/project/new" exact component={ProjectsAdd} isPrivate />
       <Route path="/project/:id/edit" component={ProjectsEdit} isPrivate />
-
-      <Route path="/project/:slug" component={ProjectPage} isProjectPage />
     </Switch>
   );
 }
