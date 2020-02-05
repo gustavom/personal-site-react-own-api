@@ -3,13 +3,19 @@ import 'react-perfect-scrollbar/dist/css/styles.css';
 import 'react-toastify/dist/ReactToastify.css';
 
 export default createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+  /* @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap'); */
   /* @import url('https://fonts.googleapis.com/css?family=Darker+Grotesque:400,500,600,700,800,900&display=swap'); */
 /*   @import url('https://rsms.me/inter/inter.css');
 html { font-family: 'Inter', sans-serif; }
 @supports (font-variation-settings: normal) {
   html { font-family: 'Inter var', sans-serif; }
 } */
+
+  @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,600|Syncopate:400,700&display=swap');
+  /*
+  font-family: 'Syncopate', sans-serif;
+font-family: 'Poppins', sans-serif;
+   */
   *{
     margin:0;
     padding: 0;
