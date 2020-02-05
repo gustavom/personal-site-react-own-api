@@ -4,7 +4,12 @@ import { toast } from 'react-toastify';
 import { useParams } from 'react-router-dom';
 import api from '~/services/api';
 
-import { Container } from './styles';
+import {
+  Container,
+  ProjectDetailContainer,
+  InfoContainer,
+  ImageContainer,
+} from './styles';
 
 export default function ProjectPage({ history, match }) {
   // const slug = useMemo(() => match.params.slug, [match.params.slug]);
@@ -38,15 +43,19 @@ export default function ProjectPage({ history, match }) {
       {loading ? (
         <div className="loading">carregando...</div>
       ) : (
-        <>
-          <h1>{project.name}</h1>
-          <img src={project.banner.url} alt={project.name} />
-          <p>{project.description}</p>
-          <a href={project.url_external} target="_blank">
-            Ver projeto
-          </a>
-          {console.log('projeto', project)}
-        </>
+        <ProjectDetailContainer>
+          <InfoContainer>
+            <h1>{project.name}</h1>
+            <p>{project.description}</p>
+          </InfoContainer>
+          <ImageContainer
+            style={{ backgroundImage: `url(${project.banner.url})` }}
+          >
+            <a href={project.url_external} target="_blank">
+              {/* <img src={project.banner.url} alt={project.name} /> */}
+            </a>
+          </ImageContainer>
+        </ProjectDetailContainer>
       )}
     </Container>
   );
