@@ -13,9 +13,12 @@ export const Container = styled.header`
   h1 {
     text-transform: uppercase;
     font-size: inherit;
-    letter-spacing: 2.5px;
+    letter-spacing: 5px;
     font-weight: 300;
     color: rgba(0, 0, 0, 0.5);
+    font-family: 'Syncopate', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
     a {
       color: inherit;
     }
@@ -23,9 +26,12 @@ export const Container = styled.header`
   nav {
     ul {
       li {
+        font-family: 'Syncopate', sans-serif;
+        font-weight: 400;
+        text-transform: uppercase;
         text-transform: uppercase;
         font-size: inherit;
-        letter-spacing: 2.5px;
+        letter-spacing: 5px;
       }
     }
   }
