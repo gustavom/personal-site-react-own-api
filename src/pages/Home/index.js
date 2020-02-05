@@ -2,7 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import api from '~/services/api';
 
-import { Wrapper, Container, ProjectItem } from './styles';
+import {
+  Wrapper,
+  Container,
+  ContainerProjetosHome,
+  ProjectList,
+  ProjectItem,
+} from './styles';
 
 export default function Home() {
   const [projects, setProjects] = useState([]);
@@ -30,16 +36,19 @@ export default function Home() {
         </a> */}
       </Container>
 
-      <Container>
-        {projects.map(project => (
-          <ProjectItem key={project.id}>
-            <Link to={`project/${project.slug}`}>
-              <h3>{project.name}</h3>
-              {/* <img src={project.banner.url} /> */}
-            </Link>
-          </ProjectItem>
-        ))}
-      </Container>
+      <ContainerProjetosHome>
+        <h2>Projetos</h2>
+        <ProjectList>
+          {projects.map(project => (
+            <ProjectItem key={project.id}>
+              <Link to={`project/${project.slug}`}>
+                <h3>{project.name}</h3>
+                {/* <img src={project.banner.url} /> */}
+              </Link>
+            </ProjectItem>
+          ))}
+        </ProjectList>
+      </ContainerProjetosHome>
     </Wrapper>
   );
 }
