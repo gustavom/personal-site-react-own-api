@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { Wrapper, Content } from './styles';
 
 import Header from '~/components/Header';
+import Footer from '~/components/Footer';
 
 export default function HomeLayout({ children }) {
   // const [scroll, setScroll] = useState(0);
@@ -30,6 +31,8 @@ export default function HomeLayout({ children }) {
     <Wrapper>
       <Header layoutchange={headerLayout} />
       <Content>{children}</Content>
+
+      <Footer />
     </Wrapper>
   );
 }
