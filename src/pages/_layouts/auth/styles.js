@@ -4,17 +4,32 @@ import { darken } from 'polished';
 
 export const Wrapper = styled.div`
   height: 100%;
-  background: linear-gradient(-90deg, #7159c1, #ab59c1);
+  /* background: linear-gradient(-90deg, #7159c1, #ab59c1); */
+  background-color: #000;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+  }
 `;
 
 export const Content = styled.div`
   width: 100%;
   max-width: 315px;
   text-align: center;
-
+  z-index: 2;
   h2 {
     font-size: 25px;
     text-transform: uppercase;
@@ -26,7 +41,7 @@ export const Content = styled.div`
     margin-top: 30px;
 
     input {
-      background: rgba(0, 0, 0, 0.1);
+      background: rgba(0, 0, 0, 0.9);
       border: 0;
       border-radius: 4px;
       height: 44px;
