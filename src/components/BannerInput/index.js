@@ -23,7 +23,7 @@ export default function BannerInput({ urlImg }) {
         path: 'dataset.file',
       });
     }
-    console.log('teste', registerField.value);
+    // console.log('teste', registerField.value);
   }, [ref]); //eslint-disable-line
 
   async function handleChange(e) {
@@ -46,7 +46,7 @@ export default function BannerInput({ urlImg }) {
 
   return (
     <Container>
-      {console.log('urlImg', urlImg)}
+      {/* {console.log('urlImg', urlImg)} */}
       <label htmlFor="banner">
         {/* <img src={urlImg} alt="" /> */}
 
