@@ -1,28 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import api from '~/services/api';
+import React from 'react';
 
-import {
-  Wrapper,
-  Container,
-  ContainerProjetosHome,
-  ProjectList,
-  ProjectItem,
-} from './styles';
+import ProjectListComponent from '~/components/ProjectsListComponent';
+
+import { Wrapper, Container, ContainerProjetosHome } from './styles';
 
 export default function Home() {
-  const [projects, setProjects] = useState([]);
-
-  useEffect(() => {
-    async function loadProjects() {
-      const response = await api.get('projects');
-      const data = response.data.map(project => {
-        return project;
-      });
-      setProjects(data);
-    }
-    loadProjects();
-  }, []);
   return (
     <Wrapper>
       <Container className="home-about">
@@ -38,16 +20,7 @@ export default function Home() {
 
       <ContainerProjetosHome>
         <h2>Projetos</h2>
-        <ProjectList>
-          {projects.map(project => (
-            <ProjectItem key={project.id}>
-              <Link to={`project/${project.slug}`}>
-                <h3>{project.name}</h3>
-                {/* <img src={project.banner.url} /> */}
-              </Link>
-            </ProjectItem>
-          ))}
-        </ProjectList>
+        <ProjectListComponent />
       </ContainerProjetosHome>
     </Wrapper>
   );
