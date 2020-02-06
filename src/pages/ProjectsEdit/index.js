@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { Form, Input } from '@rocketseat/unform';
+import { Form, Input, Select } from '@rocketseat/unform';
 import { toast } from 'react-toastify';
 
 import api from '~/services/api';
@@ -17,6 +17,21 @@ export default function ProjectsEdit({ history, match }) {
 
   const [bannerInfo, setBannerInfo] = useState('');
 
+  const [bannerId, setBannerId] = useState('');
+
+  const options = [
+    { id: 1, title: '01' },
+    { id: 2, title: '02' },
+    { id: 3, title: '03' },
+    { id: 4, title: '04' },
+    { id: 5, title: '05' },
+    { id: 6, title: '06' },
+    { id: 7, title: '07' },
+    { id: 8, title: '08' },
+    { id: 9, title: '09' },
+    { id: 10, title: '10' },
+  ];
+
   useEffect(() => {
     async function loadProject() {
       try {
@@ -25,13 +40,17 @@ export default function ProjectsEdit({ history, match }) {
           ...data,
         });
         setBannerInfo(data.banner.url);
-        console.log('bannerInfo', bannerInfo);
+        setBannerId(data.banner_id);
+        console.log('log de data', data);
+        console.log('log de banner_id', data.banner_id);
+
+        // console.log('bannerInfo', bannerInfo);
       } catch (err) {
         toast.error('Project not found');
         history.push('/');
       }
     }
-    console.log(id);
+    // console.log(id);
     loadProject();
   }, [id]);
 
@@ -39,11 +58,20 @@ export default function ProjectsEdit({ history, match }) {
     try {
       // console.log(data);
 
+      console.log(data);
+      console.log(data.banner_id);
+      console.log(bannerId);
+      if (data.banner_id == undefined) data.banner_id = bannerId;
       await api.put(`projects/${id}`, data);
-      history.push(`/projects/${id}`);
+
+      // history.push(`/projects/${id}`);
+      history.push(`/projetos-list`);
       toast.success('Projeto editado com sucesso!');
       // history.push(`/projects/${response.data.id}`);
     } catch (err) {
+      console.log(err);
+      console.log(data);
+
       toast.error(`Whoops! Internal server error.${err}`);
     }
   }
@@ -72,6 +100,7 @@ export default function ProjectsEdit({ history, match }) {
         <Input name="url_external" placeholder="Url do projeto" />
 
         <Input multiline name="description" placeholder="Descrição" />
+        <Select name="order" options={options} placeholder="Ordem" />
 
         <button type="submit">Editar Projeto</button>
       </Form>
