@@ -19,7 +19,7 @@ export default function Routes() {
     <Switch>
       <Route path="/" exact component={Home} isHome />
       <Route path="/login" exact component={SignIn} />
-      <Route path="/register" component={SignUp} />
+      {/* <Route path="/register" component={SignUp} /> */}
       <Route path="/projects" component={ProjectsListPage} isProjectPage />
 
       <Route path="/dashboard" component={Dashboard} isPrivate />
