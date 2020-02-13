@@ -19,7 +19,8 @@ export const Wrapper = styled.div`
   footer {
     position: relative;
   }
-  header * {
+  header *,
+  footer * {
     animation: none !important;
   }
 `;
