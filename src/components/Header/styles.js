@@ -34,6 +34,24 @@ export const Container = styled.header`
         text-transform: uppercase;
         font-size: inherit;
         letter-spacing: 5px;
+        position: relative;
+        &:after {
+          content: '';
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-color: currentColor;
+          height: 1px;
+          width: 100%;
+          opacity: 0;
+          transition: opacity 0.3s ease-out;
+        }
+        &:hover {
+          &:after {
+            opacity: 0.8;
+          }
+        }
       }
     }
   }
