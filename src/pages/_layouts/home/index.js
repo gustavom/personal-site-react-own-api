@@ -11,6 +11,9 @@ export default function HomeLayout({ children }) {
   const [headerLayout, setHeaderLayout] = useState('white');
 
   function handleScroll() {
+    // console.log('scrollTop', document.documentElement.scrollTop);
+    // console.log('clientHeight', document.documentElement.clientHeight);
+
     if (
       document.documentElement.scrollTop >=
       document.documentElement.clientHeight - 20
