@@ -19,13 +19,13 @@ export const Container = styled.header`
     font-family: 'Syncopate', sans-serif;
     font-weight: 400;
     text-transform: uppercase;
-    animation: fade-in-left 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) 1s both;
+    animation: fade-in-left 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) 0.9s both;
     a {
       color: inherit;
     }
   }
   nav {
-    animation: fade-in-right 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) 1.2s both;
+    animation: fade-in-right 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) 1s both;
     ul {
       li {
         font-family: 'Syncopate', sans-serif;
