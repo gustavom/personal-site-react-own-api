@@ -4,6 +4,9 @@ import ProjectListComponent from '~/components/ProjectsListComponent';
 
 import { Wrapper, Container, ContainerProjetosHome } from './styles';
 
+// import VizSensor from 'react-visibility-sensor';
+// https://alligator.io/react/components-viewport-react-visibility-sensor/
+
 export default function Home() {
   return (
     <Wrapper>
