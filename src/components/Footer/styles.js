@@ -18,6 +18,12 @@ export const Container = styled.footer`
   font-size: 12px;
   ul {
     list-style: none;
+    li {
+      animation: fade-in-left 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) 1.2s both;
+    }
+  }
+  span {
+    animation: fade-in-right 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) 1.4s both;
   }
   a {
     color: #fff;
