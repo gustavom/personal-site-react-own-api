@@ -19,6 +19,7 @@ export const Container = styled.div`
   &.home-about {
     background-color: #222;
     color: #fff;
+    overflow: hidden;
     h1 {
       font-family: 'Syncopate', sans-serif;
       font-weight: 700;
@@ -30,6 +31,8 @@ export const Container = styled.div`
       position: absolute;
       right: 0;
       top: 0; */
+      /* animation: slide-in-right 1.5s cubic-bezier(0.86, 0, 0.07, 1) both; */
+      animation: fade-in-bottom 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
     }
     a {
       padding: 8px 16px;
