@@ -46,6 +46,25 @@ export const Container = styled.div`
     }
   }
 `;
+
+function template(i, duration) {
+  return `
+      &:nth-child(${i + 1}) {
+        animation: fade-in-left 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) 0.${duration +
+          i}s both;
+
+       }
+    `;
+}
+
+function getAnimations() {
+  let str = '';
+  for (let index = 0; index < 4; index += 1) {
+    str += template(index, index);
+  }
+  return str;
+}
+
 export const ContainerProjetosHome = styled.div`
   width: 100%;
   height: 100vh;
@@ -66,5 +85,27 @@ export const ContainerProjetosHome = styled.div`
     font-size: 45px;
     padding-bottom: 15px;
     margin-bottom: 45px;
+  }
+  ul {
+    opacity: 0;
+  }
+  &.noAnimation {
+    h2,
+    ul {
+      opacity: 0;
+    }
+  }
+  &.animateNow {
+    h2 {
+      animation: fade-in-bottom 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) 0.2s
+        both;
+    }
+    ul {
+      animation: fade-in-bottom 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) 0.4s
+        both;
+      li {
+        ${getAnimations()}
+      }
+    }
   }
 `;
