@@ -19,6 +19,7 @@ export const Container = styled.div`
   p {
     margin: 0;
     padding: 0 5px;
+    white-space: pre-line;
     & + p {
       margin-top: 15px;
     }
