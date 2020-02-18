@@ -16,9 +16,18 @@ export default function Footer() {
               linkedin
             </a>
           </li>
+          <li>
+            <a
+              href="mailto:gustavo_crj@hotmail.com?subject=I%2enjoyed%2that"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              E-mail
+            </a>
+          </li>
         </ul>
       </nav>
-      <span>@2020</span>
+      <span>© Gustavo M.</span>
     </Container>
   );
 }
