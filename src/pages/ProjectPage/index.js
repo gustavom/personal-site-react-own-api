@@ -39,7 +39,7 @@ export default function ProjectPage({ history, match }) {
       }
     }
     loadProject();
-  }, [slug]);
+  }, [slug, history]);
 
   return (
     <Container>
@@ -55,7 +55,11 @@ export default function ProjectPage({ history, match }) {
           <ImageContainer
             style={{ backgroundImage: `url(${project.banner.url})` }}
           >
-            <a href={project.url_external} target="_blank">
+            <a
+              href={project.url_external}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {/* <img src={project.banner.url} alt={project.name} /> */}
             </a>
           </ImageContainer>
