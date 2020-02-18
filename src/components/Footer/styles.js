@@ -18,8 +18,19 @@ export const Container = styled.footer`
   font-size: 12px;
   ul {
     list-style: none;
+    display: flex;
     li {
-      animation: fade-in-left 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) 1.2s both;
+      &:nth-child(1) {
+        animation: fade-in-left 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) 1.2s
+          both;
+      }
+      &:nth-child(2) {
+        animation: fade-in-left 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) 1.8s
+          both;
+      }
+      & + li {
+        margin-left: 15px;
+      }
     }
   }
   span {
