@@ -16,14 +16,32 @@ export const ProjectItem = styled.li`
   text-transform: uppercase;
   /* padding-bottom: 25px; */
   border-bottom: solid 1px #999;
-  padding: 10px 3px 6px;
   margin-bottom: 10px;
-  h3{
-    font-weight: 500;
-    font-size: 14px;
-  }
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 3px 6px;
+    &:after {
+      content: '';
+      display: block;
+      width: 6px;
+      height: 6px;
+      background-color: #222;
+      border-radius: 50%;
+      margin-left: 20px;
+      margin-right: 10px;
+      opacity: 0;
+    }
+    h3 {
+      font-weight: 500;
+      font-size: 14px;
+    }
     &:hover {
       text-decoration: underline;
+      &:after {
+        opacity: 1;
+      }
     }
   }
 `;
