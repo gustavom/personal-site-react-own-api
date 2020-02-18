@@ -48,13 +48,20 @@ export const Container = styled.div`
 `;
 
 function template(i, duration) {
+  let $value = 0.5 + (1 / 20) * i;
   return `
       &:nth-child(${i + 1}) {
-        animation: fade-in-left 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) 0.${duration +
-          i}s both;
+        animation: fade-in-left 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) ${$value}s both;
 
        }
     `;
+  // return `
+  //     &:nth-child(${i + 1}) {
+  //       animation: fade-in-left 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) 0.${duration +
+  //         i}s both;
+
+  //      }
+  //   `;
 }
 
 function getAnimations() {
