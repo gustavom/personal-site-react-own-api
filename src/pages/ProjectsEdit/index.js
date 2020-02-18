@@ -52,7 +52,7 @@ export default function ProjectsEdit({ history, match }) {
     }
     // console.log(id);
     loadProject();
-  }, [id]);
+  }, [id, history]);
 
   async function handleSubmit(data) {
     try {
