@@ -4,6 +4,8 @@ import { toast } from 'react-toastify';
 import { useParams } from 'react-router-dom';
 import api from '~/services/api';
 
+import Loader from '~/components/Loader';
+
 import {
   Container,
   ProjectDetailContainer,
@@ -30,6 +32,7 @@ export default function ProjectPage({ history, match }) {
         });
         console.log('2', data);
         setLoading(false);
+        // setLoading(true);
       } catch (err) {
         toast.error('Project not found');
         history.push('/projects');
@@ -41,7 +44,8 @@ export default function ProjectPage({ history, match }) {
   return (
     <Container>
       {loading ? (
-        <div className="loading">carregando...</div>
+        // <div className="loading">carregando...</div>
+        <Loader />
       ) : (
         <ProjectDetailContainer>
           <InfoContainer>
