@@ -59,7 +59,7 @@ function template(i, duration) {
 
 function getAnimations() {
   let str = '';
-  for (let index = 0; index < 4; index += 1) {
+  for (let index = 0; index < 10; index += 1) {
     str += template(index, index);
   }
   return str;
