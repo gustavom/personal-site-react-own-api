@@ -61,7 +61,7 @@ export default function ProjectsEdit({ history, match }) {
       console.log(data);
       console.log(data.banner_id);
       console.log(bannerId);
-      if (data.banner_id == undefined) data.banner_id = bannerId;
+      if (data.banner_id === undefined) data.banner_id = bannerId;
       await api.put(`projects/${id}`, data);
 
       // history.push(`/projects/${id}`);
