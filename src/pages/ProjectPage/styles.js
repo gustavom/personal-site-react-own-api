@@ -36,6 +36,7 @@ export const InfoContainer = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   /* background-color: red; */
+  animation: fade-in-left 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 `;
 export const ImageContainer = styled.div`
   flex: 0 0 50%;
@@ -44,6 +45,7 @@ export const ImageContainer = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   border: solid 1px #efefef;
+  animation: fade-in-right 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) 0.5s both;
   a {
     display: block;
     width: 100%;
