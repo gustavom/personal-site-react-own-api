@@ -1,5 +1,23 @@
 import styled from 'styled-components';
 
+function template(i, duration) {
+  let $value = 0.5 + (1 / 20) * i;
+  return `
+      &:nth-child(${i + 1}) {
+        animation: fade-in-left 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) ${$value}s both;
+
+       }
+    `;
+}
+
+function getAnimations() {
+  let str = '';
+  for (let index = 0; index < 10; index += 1) {
+    str += template(index, index);
+  }
+  return str;
+}
+
 export const ContainerProjetos = styled.div`
   width: 100%;
   /* height: 100vh; */
@@ -20,5 +38,14 @@ export const ContainerProjetos = styled.div`
     font-size: 45px;
     padding-bottom: 15px;
     margin-bottom: 45px;
+    animation: 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) 0.2s 1 normal both
+      running fade-in-bottom;
+  }
+  ul {
+    animation: 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) 0.4s 1 normal both
+      running fade-in-bottom;
+    li {
+      ${getAnimations()}
+    }
   }
 `;
