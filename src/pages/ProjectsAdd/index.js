@@ -12,7 +12,8 @@ import history from '~/services/history';
 export default function ProjectsAdd() {
   async function handleSubmit(data) {
     try {
-      const response = await api.post('projects', data);
+      // const response = await api.post('projects', data);
+      await api.post('projects', data);
       toast.success('Projeto criado com sucesso!');
       // history.push(`/projects/${response.data.id}`);
       history.push('/projetos-list');
