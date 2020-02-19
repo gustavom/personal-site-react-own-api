@@ -150,4 +150,9 @@ export const ContainerProjetosHome = styled.div`
       }
     }
   }
+  @media (max-width: 550px) {
+    h2 {
+      font-size: calc(100vw / 12);
+    }
+  }
 `;
