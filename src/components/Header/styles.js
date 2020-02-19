@@ -68,4 +68,13 @@ export const Container = styled.header`
       color: inherit;
     }
   }
+  @media (max-width: 550px) {
+    h1 {
+      font-size: 0;
+      &:before {
+        content: 'G.';
+        font-size: 14px;
+      }
+    }
+  }
 `;
