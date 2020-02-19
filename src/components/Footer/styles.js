@@ -4,7 +4,8 @@ export const Container = styled.footer`
   position: fixed;
   width: 100%;
   height: 50px;
-  background-color: #222;
+  /* background-color: #222; */
+  background-color: #000;
   bottom: 0;
   left: 0;
   color: #fff;
