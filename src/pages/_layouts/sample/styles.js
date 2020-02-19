@@ -15,6 +15,10 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+  header,
+  footer {
+    position: relative;
+  }
 `;
 export const Content = styled.div`
   width: 100%;
