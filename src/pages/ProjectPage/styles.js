@@ -68,7 +68,7 @@ export const ImageContainer = styled.div`
   /* flex: 0 0 50%; */
   flex: 0 0 100%;
   order: 2;
-  min-height: 450px;
+  height: 450px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
