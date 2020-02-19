@@ -48,4 +48,9 @@ export const ContainerProjetos = styled.div`
       ${getAnimations()}
     }
   }
+  @media (max-width: 550px) {
+    h2 {
+      font-size: calc(100vw / 12);
+    }
+  }
 `;
