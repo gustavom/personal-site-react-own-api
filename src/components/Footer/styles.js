@@ -39,4 +39,14 @@ export const Container = styled.footer`
   a {
     color: #fff;
   }
+  @media (max-width: 550px) {
+    font-size: 11px;
+    span {
+      font-size: 0;
+      &:before {
+        content: 'G.';
+        font-size: 12px;
+      }
+    }
+  }
 `;
