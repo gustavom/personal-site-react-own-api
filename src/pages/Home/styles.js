@@ -17,7 +17,8 @@ export const Container = styled.div`
   align-items: flex-end;
 
   &.home-about {
-    background-color: #222;
+    /* background-color: #222; */
+    background-color: #000;
     color: #fff;
     overflow: hidden;
     h1 {
