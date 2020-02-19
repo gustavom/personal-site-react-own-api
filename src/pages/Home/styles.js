@@ -27,6 +27,8 @@ export const Container = styled.div`
       text-transform: uppercase;
       letter-spacing: 5px;
       font-size: 45px;
+      font-size: calc(100vw / 29);
+      text-align: right;
       /* transform-origin: 0 0;
       transform: rotate(90deg);
       position: absolute;
@@ -44,6 +46,38 @@ export const Container = styled.div`
       border-radius: 90px;
       text-transform: uppercase;
       letter-spacing: 0.5px;
+    }
+  }
+  @media (max-width: 650px) {
+    &.home-about {
+      h1 {
+        font-size: 40px;
+        line-height: 2;
+      }
+    }
+  }
+  @media (max-width: 550px) {
+    &.home-about {
+      h1 {
+        font-size: 35px;
+        line-height: 2;
+      }
+    }
+  }
+  @media (max-width: 500px) {
+    &.home-about {
+      h1 {
+        font-size: 30px;
+        line-height: 2;
+      }
+    }
+  }
+  @media (max-width: 400px) {
+    &.home-about {
+      h1 {
+        font-size: 25px;
+        line-height: 2;
+      }
     }
   }
 `;
