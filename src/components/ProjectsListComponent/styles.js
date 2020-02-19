@@ -9,6 +9,9 @@ export const Container = styled.ul`
   justify-content: flex-start;
   flex-wrap: wrap;
   padding-left: 50%;
+  @media (max-width: 580px) {
+    padding: 0 15px;
+  }
 `;
 export const ProjectItem = styled.li`
   flex: 0 0 100%;
