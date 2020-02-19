@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const size = {
   table: '1024px',
+  mobileHi: '600px',
 };
 
 export const Container = styled.div`
@@ -21,7 +22,7 @@ export const Container = styled.div`
     padding: 0 5px 10px;
     margin-bottom: 50px;
     border-bottom: solid 2px rgba(0, 0, 0, 0.5);
-    word-break: break-all;
+    /* word-break: break-all; */
   }
   p {
     margin: 0;
@@ -33,6 +34,13 @@ export const Container = styled.div`
   }
   @media (max-width: ${size.table}) {
     padding: 50px 0 10px;
+  }
+  @media (max-width: ${size.mobileHi}) {
+    h1 {
+      word-break: break-all;
+      font-size: 30px;
+      font-size: calc(100vw / 20);
+    }
   }
 `;
 
