@@ -9,7 +9,8 @@ export const Container = styled.div`
   /* max-width: 1100px; */
   /* height: 100vh; */
   margin: 0 auto;
-  padding: 50px 15px 10px;
+  /* padding: 50px 15px 10px; */
+  padding: 50px 0 10px;
   h1 {
     color: #000;
     font-family: 'Syncopate', sans-serif;
