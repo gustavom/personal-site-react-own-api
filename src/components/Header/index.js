@@ -15,6 +15,9 @@ export default function Header({ layoutchange }) {
           <li>
             <Link to="/projetos">Projetos</Link>
           </li>
+          <li>
+            <Link to="/sobre">Sobre</Link>
+          </li>
         </ul>
       </nav>
     </Container>
