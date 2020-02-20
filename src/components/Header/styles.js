@@ -52,17 +52,23 @@ export const Container = styled.header`
           transition: opacity 0.3s ease-out;
         }
         & + li {
-          margin-left: 15px;
+          position: relative;
+          margin-left: 30px;
           animation: fade-in-right 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) 1.2s
             both;
           &:before {
             content: '';
+            position: absolute;
             display: block;
             width: 5px;
             height: 5px;
             background-color: rgba(0, 0, 0, 0.5);
             border-radius: 50%;
             margin-right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            margin-left: -19px;
           }
         }
         &:hover {
