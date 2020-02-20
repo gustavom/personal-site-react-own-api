@@ -21,10 +21,6 @@ export default function About() {
             nomes.
           </p>
           <p>
-            Atualmente, trabalho na manutenção e evolução do portal principal da
-            universidade e de seus projetos paralelos.
-          </p>
-          <p>
             Eu criei este site pessoal para mostrar um pouco do que fiz ao mundo
             e também para treinar (este site possui um gerenciador de conteúdo
             feito por mim com NodeJs, se me perguntar, podemos falar mais sobre
