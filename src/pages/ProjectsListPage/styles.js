@@ -20,7 +20,7 @@ function getAnimations() {
 
 export const ContainerProjetos = styled.div`
   width: 100%;
-  /* height: 100vh; */
+  height: 100vh;
   /* height: 100%; */
   padding: 40px 15px 30px;
   margin: 0 auto;

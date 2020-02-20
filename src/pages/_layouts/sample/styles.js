@@ -19,6 +19,10 @@ export const Wrapper = styled.div`
   footer {
     position: relative;
   }
+  header *,
+  footer * {
+    animation: none !important;
+  }
 `;
 export const Content = styled.div`
   width: 100%;
