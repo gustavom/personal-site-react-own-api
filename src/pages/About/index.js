@@ -8,28 +8,30 @@ export default function About() {
       <Container>
         <h1>About</h1>
         <AboutContainer>
-          <p>Hello!</p>
+          <p>Olá!</p>
           <p>
-            I'm Gustavo Martusewicz, front-end developer. <br />I currently work
-            at PUC-SP, one of the most important universities in Brazil.
+            Sou Gustavo Martusewicz, desenvolvedor front-end.
+            <br />
+            Atualmente trabalho na PUC-SP, uma das universidades mais
+            importantes do Brasil.
           </p>
           <p>
-            I have more than 10 years of experience, going from the time of
-            webmaster, webdesigner, html + css kid, layout cutter and a few
-            other names.
+            Tenho mais de 10 anos de experiência na área, desde webmaster,
+            webdesigner, garoto do html + css , cortador de layout e outros
+            nomes.
           </p>
           <p>
-            I currently work maintaining and evolving the university's main
-            portal and its side projects.
+            Atualmente, trabalho na manutenção e evolução do portal principal da
+            universidade e de seus projetos paralelos.
           </p>
           <p>
-            I made this personal site to show a little of what I did to the
-            world and also to train (this site has a content manager made by
-            myself in node, ask me what I talk about more) this wonderful lib
-            that is React JS.
+            Eu criei este site pessoal para mostrar um pouco do que fiz ao mundo
+            e também para treinar (este site possui um gerenciador de conteúdo
+            feito por mim com NodeJs, se me perguntar, podemos falar mais sobre
+            isso) essa maravilhosa lib que é o React JS.
           </p>
-          <p>Feel free to browse, look and evaluate!</p>
-          <p>Thanks!</p>
+          <p>Sinta-se livre para navegar, olhar e avaliar!</p>
+          <p>Obrigado!</p>
         </AboutContainer>
       </Container>
     </Wrapper>

@@ -46,6 +46,7 @@ export const AboutContainer = styled.div`
   p {
     font-size: 18px;
     line-height: 2;
+    margin-bottom: 15px;
   }
   @media (max-width: 550px) {
     padding: 0 37px 30px;
