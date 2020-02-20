@@ -13,7 +13,7 @@ export default function Header({ layoutchange }) {
       <nav>
         <ul>
           <li>
-            <Link to="/projects">Projetos</Link>
+            <Link to="/projetos">Projetos</Link>
           </li>
         </ul>
       </nav>

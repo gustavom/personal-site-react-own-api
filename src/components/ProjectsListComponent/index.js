@@ -35,7 +35,7 @@ export default function ProjectsListComponent() {
       ) : (
         projects.map(project => (
           <ProjectItem key={project.id}>
-            <Link to={`project/${project.slug}`}>
+            <Link to={`projeto/${project.slug}`}>
               <h3>{project.name}</h3>
               {/* <img src={project.banner.url} /> */}
             </Link>
