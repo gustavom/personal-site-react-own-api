@@ -6,7 +6,7 @@ export default function About() {
   return (
     <Wrapper>
       <Container>
-        <h1>About</h1>
+        <h1>Sobre</h1>
         <AboutContainer>
           <p>Olá!</p>
           <p>
