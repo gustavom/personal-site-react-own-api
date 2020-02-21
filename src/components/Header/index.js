@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { Container, MobileTrigger } from './styles';
 
 export default function Header({ layoutchange }) {
-  const [mobileOpen, setMobileOpen] = useState(true);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   function handleMobileMenu() {
     if (mobileOpen) {
