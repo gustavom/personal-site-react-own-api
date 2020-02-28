@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import { useParams } from 'react-router-dom';
+// import { useParams } from 'react-router-dom';
 import api from '~/services/api';
 import { toast } from 'react-toastify';
 
@@ -8,7 +8,7 @@ import { Wrapper, Container, AboutContainer } from './styles';
 import Loader from '~/components/Loader';
 
 export default function About({ history }) {
-  const { slug } = useParams();
+  // const { slug } = useParams();
   const [loading, setLoading] = useState(true);
   const [about, setAbout] = useState(null);
 
@@ -29,16 +29,12 @@ export default function About({ history }) {
       }
     }
     loadAbout();
-  }, [slug, history]);
+  }, [history]);
 
   return (
     <Wrapper>
       <Container>
         <h1>Sobre</h1>
-<<<<<<< HEAD
-        <AboutContainer>
-          <p>Olá!</p>
-=======
 
         {loading ? (
           // <div className="loading">carregando...</div>
@@ -48,7 +44,6 @@ export default function About({ history }) {
         ) : (
           <AboutContainer>
             {/* <p>Olá!</p>
->>>>>>> 8fe46ae697b55daf849b8b49e9fdd76b53f74b33
           <p>
             Sou Gustavo Martusewicz, desenvolvedor front-end.
             <br />
