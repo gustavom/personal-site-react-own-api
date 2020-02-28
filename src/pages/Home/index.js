@@ -24,7 +24,7 @@ export default function Home({ history }) {
   useEffect(() => {
     async function loadAbout() {
       try {
-        const { data } = await api.get(`/institucional/sobre`);
+        const { data } = await api.get(`/institucional`);
         console.log('about 01', data);
         setAbout({
           ...data,
@@ -39,7 +39,7 @@ export default function Home({ history }) {
     }
     async function loadProjetos() {
       try {
-        const { data } = await api.get(`/projects/fsdfsfsad`);
+        const { data } = await api.get(`/projects/portal-puc-sp`);
         console.log('project 01', data);
         setAbout({
           ...data,
