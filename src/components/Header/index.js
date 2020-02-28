@@ -1,16 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { Link } from 'react-router-dom';
 
-import { Container } from './styles';
+import { Container, MobileTrigger } from './styles';
 
 export default function Header({ layoutchange }) {
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  function handleMobileMenu() {
+    if (mobileOpen) {
+      return setMobileOpen(false);
+    }
+    setMobileOpen(true);
+  }
   return (
     <Container className={layoutchange}>
+      <MobileTrigger
+        className={mobileOpen ? 'isOpen' : 'isClosed'}
+        onClick={handleMobileMenu}
+      >
+        <span></span>
+      </MobileTrigger>
       <h1>
         <Link to="/">Gustavo Martusewicz</Link>
       </h1>
-      <nav>
+      <nav className={mobileOpen ? 'isOpen' : 'isClosed'}>
         <ul>
           <li>
             <Link to="/projetos">Projetos</Link>
