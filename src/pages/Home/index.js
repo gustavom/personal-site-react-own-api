@@ -24,7 +24,7 @@ export default function Home({ history }) {
   useEffect(() => {
     async function loadAbout() {
       try {
-        const { data } = await api.get(`institucional/sobre`);
+        const { data } = await api.get(`/institucional/sobre`);
         console.log('about 01', data);
         setAbout({
           ...data,
