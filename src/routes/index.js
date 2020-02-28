@@ -14,6 +14,7 @@ import ProjectsEdit from '../pages/ProjectsEdit';
 import ProjectsList from '../pages/ProjectsList';
 import ProjectPage from '../pages/ProjectPage';
 import ProjectsListPage from '../pages/ProjectsListPage';
+import AboutEdit from '../pages/AboutEdit';
 
 export default function Routes() {
   return (
@@ -29,6 +30,7 @@ export default function Routes() {
       <Route path="/projetos-list" component={ProjectsList} isPrivate />
       <Route path="/project/new" exact component={ProjectsAdd} isPrivate />
       <Route path="/project/:id/edit" component={ProjectsEdit} isPrivate />
+      <Route path="/institucional/sobre/edit" component={AboutEdit} isPrivate />
 
       <Route path="/projeto/:slug" component={ProjectPage} isProjectPage />
     </Switch>
