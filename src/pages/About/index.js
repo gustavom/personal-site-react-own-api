@@ -25,7 +25,7 @@ export default function About({ history }) {
         // setLoading(true);
       } catch (err) {
         toast.error('Project not found');
-        history.push('/');
+        // history.push('/');
       }
     }
     loadAbout();
