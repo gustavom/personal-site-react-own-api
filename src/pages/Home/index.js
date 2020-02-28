@@ -25,11 +25,26 @@ export default function Home({ history }) {
     async function loadAbout() {
       try {
         const { data } = await api.get(`institucional/sobre`);
-        console.log('1', data);
+        console.log('about 01', data);
         setAbout({
           ...data,
         });
-        console.log('2', about);
+        console.log('about 02', data);
+        setLoading(false);
+        // setLoading(true);
+      } catch (err) {
+        toast.error('Project not found');
+        // history.push('/');
+      }
+    }
+    async function loadProjetos() {
+      try {
+        const { data } = await api.get(`/projects/fsdfsfsad`);
+        console.log('project 01', data);
+        setAbout({
+          ...data,
+        });
+        console.log('project 02', data);
         setLoading(false);
         // setLoading(true);
       } catch (err) {
@@ -38,13 +53,13 @@ export default function Home({ history }) {
       }
     }
     loadAbout();
+    loadProjetos();
   }, [history]);
 
   return (
     <Wrapper>
       <Container className="home-about">
         <h1>Front-end developer</h1>
-        {loading ? 'eetetete' : <p>{about.content}</p>}
         {/* <a
           href="https://www.linkedin.com/in/gustavo-martusewicz/"
           target="_blank"
