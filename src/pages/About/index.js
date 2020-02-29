@@ -16,16 +16,16 @@ export default function About({ history }) {
     async function loadAbout() {
       try {
         const { data } = await api.get(`institucional/sobre`);
-        console.log('1', data);
+        // console.log('1', data);
         setAbout({
           ...data,
         });
-        console.log('2', about);
+        // console.log('2', data);
         setLoading(false);
         // setLoading(true);
       } catch (err) {
         toast.error('Project not found');
-        // history.push('/');
+        history.push('/');
       }
     }
     loadAbout();

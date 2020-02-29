@@ -47,6 +47,7 @@ export const AboutContainer = styled.div`
     font-size: 18px;
     line-height: 2;
     margin-bottom: 15px;
+    white-space: pre-line;
   }
   @media (max-width: 550px) {
     padding: 0 37px 30px;

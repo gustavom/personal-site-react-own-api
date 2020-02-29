@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 import ProjectListComponent from '~/components/ProjectsListComponent';
 
@@ -7,9 +7,6 @@ import { Wrapper, Container, ContainerProjetosHome } from './styles';
 import VisibilitySensor from 'react-visibility-sensor';
 // https://alligator.io/react/components-viewport-react-visibility-sensor/
 
-import api from '~/services/api';
-import { toast } from 'react-toastify';
-
 export default function Home({ history }) {
   const [projectsViz, setProjectsViz] = useState(false);
 
@@ -17,44 +14,6 @@ export default function Home({ history }) {
     setProjectsViz(isVisible);
     console.log('Element is now %s', isVisible ? 'visible' : 'hidden');
   }
-
-  const [loading, setLoading] = useState(true);
-  const [about, setAbout] = useState(null);
-
-  useEffect(() => {
-    async function loadAbout() {
-      try {
-        const { data } = await api.get(`/institucional`);
-        console.log('about 01', data);
-        setAbout({
-          ...data,
-        });
-        console.log('about 02', data);
-        setLoading(false);
-        // setLoading(true);
-      } catch (err) {
-        toast.error('Project not found');
-        // history.push('/');
-      }
-    }
-    async function loadProjetos() {
-      try {
-        const { data } = await api.get(`/projects/portal-puc-sp`);
-        console.log('project 01', data);
-        setAbout({
-          ...data,
-        });
-        console.log('project 02', data);
-        setLoading(false);
-        // setLoading(true);
-      } catch (err) {
-        toast.error('Project not found');
-        // history.push('/');
-      }
-    }
-    loadAbout();
-    loadProjetos();
-  }, [history]);
 
   return (
     <Wrapper>
