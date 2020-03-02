@@ -19,6 +19,7 @@ export default function ProjectsListComponent() {
           return project;
         });
         setProjects(data);
+        console.log(data);
         setLoading(false);
         // setLoading(true);
       } catch (err) {
