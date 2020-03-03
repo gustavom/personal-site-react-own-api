@@ -32,6 +32,11 @@ export default function ProjectsEdit({ history, match }) {
     { id: 10, title: '10' },
   ];
 
+  const projectStatus = [
+    { id: true, title: 'Ativo' },
+    { id: false, title: 'Desativado' },
+  ];
+
   useEffect(() => {
     async function loadProject() {
       try {
@@ -101,6 +106,7 @@ export default function ProjectsEdit({ history, match }) {
 
         <Input multiline name="description" placeholder="Descrição" />
         <Select name="order" options={options} placeholder="Ordem" />
+        <Select name="status" options={projectStatus} placeholder="Status" />
 
         <button type="submit">Editar Projeto</button>
       </Form>

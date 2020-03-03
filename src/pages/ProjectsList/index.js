@@ -8,7 +8,7 @@ export default function ProjectsList() {
   const [projects, setProjects] = useState([]);
   useEffect(() => {
     async function loadProjects() {
-      const response = await api.get('projects');
+      const response = await api.get('projects/all');
       const data = response.data.map(project => {
         return project;
       });
