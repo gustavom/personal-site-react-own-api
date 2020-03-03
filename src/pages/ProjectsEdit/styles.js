@@ -11,7 +11,8 @@ export const Container = styled.div`
     margin-top: 30px;
 
     input,
-    textarea {
+    textarea,
+    select {
       background: #fff;
       border: 1px solid #222;
       border-radius: 4px;
