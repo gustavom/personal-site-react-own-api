@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const size = {
   table: '1024px',
+  phablet: '660px',
   mobileHi: '600px',
 };
 
@@ -46,19 +47,22 @@ export const Container = styled.div`
 
 export const ProjectDetailContainer = styled.div`
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   padding-bottom: 35px;
   /* @media (max-width: ${size.table}) {
     flex-direction: column;
   } */
+  @media (max-width: ${size.phablet}) {
+    flex-direction: column;
+  }
 `;
 export const InfoContainer = styled.div`
-  /* flex: 0 0 50%; */
-  flex: 0 0 100%;
-  order: 1;
+  flex: 0 0 50%;
+  /* flex: 0 0 100%; */
+  order: 2;
   /* padding: 15px 100px 15px 0; */
   padding: 0 37px 90px;
-  padding-left: 50%;
+  /* padding-left: 50%; */
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -71,23 +75,32 @@ export const InfoContainer = styled.div`
     padding-left: 37px;
     max-width: 600px;
   }
+  @media (max-width: ${size.phablet}) {
+    flex: 0 0 100%;
+    order: 1;
+  }
 `;
 export const ImageContainer = styled.div`
-  /* flex: 0 0 50%; */
-  flex: 0 0 100%;
-  order: 2;
+  flex: 0 0 50%;
+  /* flex: 0 0 100%; */
+  order: 1;
   height: 450px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   border: solid 1px #efefef;
   animation: fade-in-right 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) 0.5s both;
+  transform: scale(0.9) translateY(-15px);
   a {
     display: block;
     width: 100%;
     height: 100%;
   }
   @media (max-width: ${size.table}) {
+    flex: 0 0 50%;
+    order: 2;
+  }
+  @media (max-width: ${size.phablet}) {
     flex: 0 0 100%;
     order: 2;
   }
