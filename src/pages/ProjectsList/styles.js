@@ -33,8 +33,8 @@ export const Container = styled.div`
       text-transform: uppercase;
       font-weight: 600;
       &.edit {
-        min-width: 20px;
-        max-width: 20px;
+        min-width: 60px;
+        max-width: 80px;
 
         font-size: 13px;
         a {
@@ -58,5 +58,23 @@ export const Container = styled.div`
         text-align: center;
       }
     }
+  }
+  form {
+    display: flex;
+    select {
+      background: #fff;
+      border: 1px solid #222;
+      border-radius: 4px;
+      height: 44px;
+      padding: 0 15px;
+      color: #222;
+      margin: 0 0 10px;
+      font-weight: 500;
+      font-size: 12px;
+      margin: 0 5px;
+
+      &::placeholder {
+        color: rgba(0, 0, 0, 0.7);
+      }
   }
 `;
