@@ -4,6 +4,7 @@ import Route from './Route';
 
 import Home from '../pages/Home';
 import About from '../pages/About';
+import Tumblr from '../pages/Tumblr';
 import SignIn from '../pages/SignIn';
 // import SignUp from '../pages/SignUp';
 
@@ -24,6 +25,7 @@ export default function Routes() {
       {/* <Route path="/register" component={SignUp} /> */}
       <Route path="/projetos" component={ProjectsListPage} isProjectPage />
       <Route path="/sobre" component={About} isSamplePage />
+      <Route path="/tumblr" component={Tumblr} isSamplePage />
 
       <Route path="/dashboard" component={Dashboard} isPrivate />
       <Route path="/profile" component={Profile} isPrivate />
